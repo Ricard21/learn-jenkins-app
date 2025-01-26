@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             agent{
                 docker{
-                    image 'node:18-alpine'
+                    image 'node:23-alpine'
                     reuseNode true
                 }
             }
@@ -40,7 +40,7 @@ pipeline {
         stage('E2E'){
             agent{
                 docker{
-                    image 'docker pull mcr.microsoft.com/playwright:v1.49.1-noble'
+                    image 'docker pull mcr.microsoft.com/playwright:v1.50.0-noble'
                     reuseNode true
                 }
             }
